@@ -21,34 +21,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         imageView.image=imgArray[0]
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
-        slidebtn.setTitle("停止", for: .normal)
-        timer.invalidate()
+            if timer != nil{
+                timer.invalidate()
+                timer=nil
+                slidebtn.setTitle("再生", for: .normal)
+                Nextbtn.isEnabled=true
+                Backbtn.isEnabled=true
+            }
         resultViewController.Myimg = imageView.image
     }
         
-    
     @IBAction func tappedNext(_sender:Any){
-        index+=1
-        if(index==imgArray.count){
-            index=0
-        }
-        imageView.image=imgArray[index]
+        changeNextImage()
     }
 
     @IBAction func tappedBack(_ sender: Any) {
-
-        if(index==0){
+        index-=1
+        if(index<0){
             index=5
-        }else{
-            index-=1
         }
         imageView.image=imgArray[index]
-        
     }
     
     @IBAction func slideshow(_ sender: Any) {
@@ -66,8 +62,11 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @objc func changeImg(){
+        changeNextImage()
+    }
+    
+    func changeNextImage(){
         index+=1
         if(index==imgArray.count){
             index=0
@@ -76,13 +75,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapAction(_ sender: Any) {
-        
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        slidebtn.setTitle("再生", for: .normal)
-        Nextbtn.isEnabled=true
-        Backbtn.isEnabled=true
     }
 }
 

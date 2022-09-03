@@ -18,7 +18,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZX-BS-KeT">
                                 <rect key="frame" x="60" y="730" width="53" height="32"/>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="進む"/>
                                 <buttonConfiguration key="configuration" style="plain" title="進む"/>
                                 <connections>
                                     <action selector="tappedNextWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2u7-Tw-n5G"/>
@@ -26,7 +27,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOA-wH-CL0">
                                 <rect key="frame" x="305" y="730" width="53" height="32"/>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="再生"/>
                                 <buttonConfiguration key="configuration" style="plain" title="再生"/>
                                 <connections>
                                     <action selector="slideshow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3q-eU-Hut"/>
@@ -41,7 +43,8 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pya-Kx-bor">
                                 <rect key="frame" x="181" y="730" width="53" height="32"/>
-                                <state key="normal" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="戻る"/>
                                 <buttonConfiguration key="configuration" style="plain" title="戻る"/>
                                 <connections>
                                     <action selector="tappedBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="17g-iV-rKV"/>
@@ -98,8 +101,12 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9Y-H2-ZYJ">
                                 <rect key="frame" x="150" y="741" width="114" height="41"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="戻る"/>
+                                <buttonConfiguration key="configuration" style="plain" title="戻る">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="uNH-34-Vlj" kind="unwind" unwindAction="unwind:" id="Xzl-OV-GoH"/>
                                 </connections>
